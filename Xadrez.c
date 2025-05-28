@@ -1,31 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    // Movimentação da Torre (5 casas para a direita) com estrutura for
-    printf("Movimentação da Torre:\n");
-    for (int i = 0; i < 5; i++) {
-        printf("Direita\n");
-    }
+    // Quantidade de casas que o Cavalo irá se mover
+    int movimentosParaBaixo = 2;
+    int movimentosParaEsquerda = 1;
 
+    // Movimentos anteriores (de outras peças, se houver)
+    printf("Movimentos anteriores...\n");
+    printf("Direita\n");
+    printf("Cima\n");
+
+    // Linha em branco para separar os movimentos
     printf("\n");
 
-    // Movimentação do Bispo (5 casas na diagonal: cima e direita) com estrutura while
-    printf("Movimentação do Bispo:\n");
+    // Movimento do Cavalo: duas casas para baixo (for) e uma para esquerda (while)
+    printf("Movimento do Cavalo:\n");
+
+    // Loop for para mover duas vezes para baixo
+    for (int i = 0; i < movimentosParaBaixo; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop while para mover uma vez para esquerda
     int j = 0;
-    while (j < 5) {
-        printf("Cima Direita\n");
+    while (j < movimentosParaEsquerda) {
+        printf("Esquerda\n");
         j++;
     }
-
-    printf("\n");
-
-    // Movimentação da Rainha (8 casas para a esquerda) com estrutura do-while
-    printf("Movimentação da Rainha:\n");
-    int k = 0;
-    do {
-        printf("Esquerda\n");
-        k++;
-    } while (k < 8);
 
     return 0;
 }
